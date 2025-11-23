@@ -1,23 +1,78 @@
-<h2>Dining</h2>
-<div class="row">
-  <div class="col-md-6">
-    <div class="card mb-2">
-      <div class="card-body">
-        <h3>Today's Menu</h3>
-        <p id="menu-placeholder">Fried Chicken Legs, Green Beans, Yogurt, Fish Tacos</p>
-        <button id="refresh-menu" class="btn btn-outline-primary">Load Menu</button>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card mb-2">
-      <div class="card-body">
-        <h3>Dining Hours</h3>
-        <ul>
-          <li>Dining Hall: 7:30am–10pm</li>
-          <li>Cafe: 8am–3pm</li>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Life: Dining</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+
+  <header class="bg-primary text-white shadow-sm">
+    <nav class="container navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand fw-bold" href="index.html">Campus Life</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Map</a></li>
         </ul>
       </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <h2 class="text-success mb-4">Dining</h2>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h3 class="text-primary">Today's Menu</h3>
+
+            <ul id="menu-list" class="mb-3">
+              <li>Fried Chicken Legs</li>
+              <li>Green Beans</li>
+              <li>Yogurt</li>
+              <li>Fish Tacos</li>
+            </ul>
+
+            <button id="refresh-menu" class="btn btn-success">Load Menu</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h3 class="text-primary">Dining Hours</h3>
+            <ul>
+              <li>Dining Hall: 7:30am–10pm</li>
+              <li>Cafe: 8am–3pm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
+  </main>
+
+  <footer class="bg-primary text-white text-center py-3 mt-3">
+    <small>© Super School</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,16 +1,82 @@
-<h2>Events / Calendar</h2>
-<div id="events-list">
-  <div class="card mb-2">
-    <div class="card-body">
-      <h3>Book Fair</h3>
-      <p>Oct 25 • 12:00 PM • Student Center</p>
-      <button class="btn btn-sm btn-secondary">Details</button>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Life: Calendar</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+
+  <header class="bg-primary text-white shadow-sm">
+    <nav class="container navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand fw-bold" href="index.html">Campus Life</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Map</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <h2 class="text-success mb-4">Events / Calendar</h2>
+
+    <div id="events-list">
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h3 class="text-primary">Book Fair</h3>
+          <p>Oct 25 • 12:00 PM • Student Center</p>
+          <button class="btn btn-sm btn-secondary">Details</button>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h3 class="text-primary">Thanksgiving Dinner</h3>
+          <p>Nov 20 • 5:00 PM • Student Center</p>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h3 class="text-primary">Finals Start</h3>
+          <p>Nov 30 • 11:00 AM</p>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h3 class="text-primary">Secret Santa</h3>
+          <p>Dec 2 • 11:00 AM</p>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h3 class="text-primary">End of Finals</h3>
+          <p>Dec 8 • 7:00 PM</p>
+        </div>
+      </div>
     </div>
-  </div>
-      <p>November 20 • 5:00 PM • Thanksgiving Dinner</p>
-      <p>November 30 • 11:00 AM • Finals Start</p>
-      <p>December 2 • 11:00 AM • Secret Santa</p>
-      <p>Decmber 8 • 7:00 PM • End of Finals</p>
+    
+  </main>
 
+  <footer class="bg-primary text-white text-center py-3 mt-3">
+    <small>© Super School</small>
+  </footer>
 
-</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
