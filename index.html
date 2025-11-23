@@ -5,71 +5,88 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Super Campus Life: Home</title>
 
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <header class="bg-light border-bottom">
+  <header class="bg-primary text-white shadow-sm">
     <nav class="container navbar navbar-expand-lg">
-      <a class="navbar-brand" href="index.html">Campus Life</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand text-white fw-bold" href="index.html">Campus Life</a>
+
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div id="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
-          <li class="nav-item"><a class="nav-link" href="calendar.html">Events</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Map</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="dining.html">Dining</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="calendar.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Map</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <aside class="col-md-3">
-        <section aria-labelledby="quicklinks-heading">
-          <h2 id="quicklinks-heading">Links</h2>
-          <div class="card p-2 mb-2">Dining</div>
-          <div class="card p-2 mb-2">Next Event: Book Fair</div>
-        </section>
-      </aside>
-    </div>
-  </main>
-
-  <section class="col-md-6" aria-labelledby="announcements-heading">
-        <h2 id="announcements-heading">Announcements</h2>
-        <div class="card mb-3">
-          <img src="images/placeholder-1.jpg" class="card-img-top" alt="Announcement image placeholder">
-          <div class="card-body">
-            <h3 class="card-title">Power Outage on East Side of Campus</h3>
-            <p class="card-text">Power went out around 11:46 AM the morning of Monday, November 6th, on the East side of Campus. Classes will be determined by Professors.</p>
-            <button class="btn btn-primary">Read more</button>
-          </div>
-        </div>
-      </section>
 
   <main class="container my-4">
     <div class="row">
+
       <aside class="col-md-3">
+        <section aria-labelledby="quicklinks-heading" class="mb-4">
+          <h2 id="quicklinks-heading" class="text-success">Quick Links</h2>
+
+          <a href="dining.html" class="card p-2 mb-2 shadow-sm text-decoration-none">
+            <strong>Dining</strong>
+          </a>
+
+          <div class="card p-2 mb-2 shadow-sm">
+            <strong>Next Event:</strong> Book Fair
+          </div>
+        </section>
+
         <section aria-labelledby="resources-heading">
-          <h2 id="resources-heading">Resources</h2>
-          <ul>
-            <li><a href="#">Campus Map</a></li>
-            <li><a href="#">Dining Information</a></li>
+          <h2 id="resources-heading" class="text-success">Resources</h2>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-primary">Campus Map</a></li>
+            <li><a href="dining.html" class="text-primary">Dining Information</a></li>
           </ul>
         </section>
       </aside>
 
-        <footer class="bg-light border-top py-3">
-    <div class="container text-center">
-      <small>© Super School • <a href="/mnt/data/Pettit_WireFrame.pdf">
+
+      <section class="col-md-9" aria-labelledby="announcements-heading">
+        <h2 id="announcements-heading" class="text-success mb-3">Announcements</h2>
+
+        <div class="card shadow-sm mb-3">
+          <img src="images/placeholder-1.jpg" class="card-img-top" alt="Announcement image placeholder">
+
+          <div class="card-body">
+            <h3 class="card-title text-primary">Power Outage on East Side of Campus</h3>
+            <p class="card-text">
+              Power went out around 11:46 AM on Monday, November 6th, on the East side of campus.
+              Classes will be determined by Professors.
+            </p>
+            <button class="btn btn-success">Read More</button>
+          </div>
+        </div>
+      </section>
+
     </div>
+  </main>
+
+
+  <footer class="bg-primary text-white text-center py-3 mt-3">
+    <small>
+      © Super School
+      • <a class="text-white" href="#">Wireframe</a>
+    </small>
   </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
-
