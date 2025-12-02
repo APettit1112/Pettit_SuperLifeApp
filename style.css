@@ -1,62 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+:root{
+  --primary:#0d6efd; 
+  --success:#198754;
+  --muted:#6c757d;
+}
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   background-color: #f8f9fa;
   color: #212529;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h2 {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
+h2 { font-weight:700; margin-bottom:1rem; }
+h3 { font-weight:500; margin-bottom:0.5rem; }
 
-h3 {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.navbar .nav-link {
-  transition: color 0.2s;
-}
-
-.navbar .nav-link:hover {
-  color: #ffc107;
-}
+.navbar .nav-link { transition: color 0.15s ease-in-out; }
+.navbar .nav-link:hover, .navbar .nav-link:focus { color:#ffc107; outline: none; text-decoration: underline; }
 
 .card {
   border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.08);
 }
 
-#menu-list li, 
-ul li {
-  margin-bottom: 0.25rem;
-}
+#menu-list li, ul li { margin-bottom: 0.25rem; }
 
 .btn-success {
-  background-color: #198754;
-  border-color: #198754;
+  background-color: var(--success);
+  border-color: var(--success);
 }
+.btn-success:hover { background-color: #157347; border-color: #146c43; }
 
-.btn-success:hover {
-  background-color: #157347;
-  border-color: #146c43;
-}
+.btn-secondary { background-color: var(--muted); border-color: var(--muted); }
+.btn-secondary:hover { background-color: #5a6268; border-color: #545b62; }
 
-.btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
-  border-color: #545b62;
-}
-
-footer {
-  font-size: 0.9rem;
-}
+footer { font-size:0.9rem; }
 
 .card-img-top {
   border-top-left-radius: 0.5rem;
@@ -64,3 +44,34 @@ footer {
   object-fit: cover;
   max-height: 200px;
 }
+
+a:focus, button:focus {
+  outline: 3px solid rgba(255,193,7,0.35);
+  outline-offset: 2px;
+}
+
+.visually-hidden-focusable {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.visually-hidden-focusable:focus {
+  position: static;
+  left: auto;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
+  z-index: 9999;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .card-img-top { max-height: 140px; }
+  main.container { padding-left: 0.75rem; padding-right: 0.75rem; }
+}
+

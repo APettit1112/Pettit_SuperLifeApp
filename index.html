@@ -6,49 +6,49 @@
   <title>Super Campus Life: Home</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
 
   <header class="bg-primary text-white shadow-sm">
-    <nav class="container navbar navbar-expand-lg">
-      <a class="navbar-brand text-white fw-bold" href="index.html">Campus Life</a>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main</a>
+    <nav class="container navbar navbar-expand-lg navbar-dark" aria-label="Primary navigation">
+      <a class="navbar-brand fw-bold text-white" href="index.html">Campus Life</a>
 
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div id="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="dining.html">Dining</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="calendar.html">Events</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#">Map</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Map</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-
-  <main class="container my-4">
+  <main id="main-content" class="container my-4">
     <div class="row">
 
       <aside class="col-md-3">
         <section aria-labelledby="quicklinks-heading" class="mb-4">
-          <h2 id="quicklinks-heading" class="text-success">Quick Links</h2>
+          <h2 id="quicklinks-heading" class="text-success h5">Quick Links</h2>
 
           <a href="dining.html" class="card p-2 mb-2 shadow-sm text-decoration-none">
             <strong>Dining</strong>
           </a>
 
           <div class="card p-2 mb-2 shadow-sm">
-            <strong>Next Event:</strong> Book Fair October 25th 12PM
+            <strong>Next Event:</strong> Book Fair <time datetime="2025-10-25">October 25</time> 12PM
           </div>
         </section>
 
         <section aria-labelledby="resources-heading">
-          <h2 id="resources-heading" class="text-success">Resources</h2>
+          <h2 id="resources-heading" class="text-success h5">Resources</h2>
           <ul class="list-unstyled">
             <li><a href="#" class="text-primary">Campus Map</a></li>
             <li><a href="dining.html" class="text-primary">Dining Information</a></li>
@@ -56,25 +56,30 @@
         </section>
       </aside>
 
-
       <section class="col-md-9" aria-labelledby="announcements-heading">
-        <h2 id="announcements-heading" class="text-success mb-3">Announcements</h2>
+        <h2 id="announcements-heading" class="text-success mb-3 h4">Announcements</h2>
 
-        <div class="card shadow-sm mb-3">
+        <article class="card shadow-sm mb-3" aria-labelledby="announcement-power">
           <div class="card-body">
-            <h3 class="card-title text-primary">Power Outage on East Side of Campus</h3>
+            <h3 id="announcement-power" class="card-title text-primary h5">Power Outage on East Side of Campus</h3>
             <p class="card-text">
-              Power went out around 11:46 AM on Monday, November 6th, on the East side of campus.
-              Classes will be determined by Professors.
+              <time datetime="2025-11-06">November 6, 2025</time> — Power went out around 11:46 AM on the East side of campus.
+              Classes will be determined by professors.
             </p>
-            <button class="btn btn-success">Read More</button>
+            <a class="btn btn-success" href="#" role="button">Read More</a>
+          </div>
+        </article>
+
+        <div class="card shadow-sm mb-3" aria-live="polite">
+          <div class="card-body">
+            <h3 class="text-primary h5">Local Weather</h3>
+            <div id="weather-widget" class="mb-0">Loading weather...</div>
+            <small class="text-muted d-block mt-2">56 Degrees Sunny, with a 25% chance of rain. Check out more information at Weather.com</small>
           </div>
         </div>
       </section>
-
     </div>
   </main>
-
 
   <footer class="bg-primary text-white text-center py-3 mt-3">
     <small>
@@ -82,7 +87,6 @@
       • <a class="text-white" href="#">Wireframe</a>
     </small>
   </footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>

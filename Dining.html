@@ -12,17 +12,19 @@
 <body class="bg-light">
 
   <header class="bg-primary text-white shadow-sm">
-    <nav class="container navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand fw-bold" href="index.html">Campus Life</a>
+    <a class="visually-hidden-focusable" href="#main-content">Skip to main</a>
+    <nav class="container navbar navbar-expand-lg navbar-dark" aria-label="Primary navigation">
+      <a class="navbar-brand fw-bold text-white" href="index.html">Campus Life</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div id="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="dining.html">Dining</a></li>
           <li class="nav-item"><a class="nav-link" href="calendar.html">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Map</a></li>
         </ul>
@@ -30,38 +32,40 @@
     </nav>
   </header>
 
-  <main class="container my-4">
-    <h2 class="text-success mb-4">Dining</h2>
+  <main id="main-content" class="container my-4">
+    <h2 class="text-success mb-4 h4">Dining</h2>
 
     <div class="row">
 
       <div class="col-md-6">
-        <div class="card shadow-sm mb-3">
+        <article class="card shadow-sm mb-3">
           <div class="card-body">
-            <h3 class="text-primary">Today's Menu</h3>
+            <h3 class="text-primary h5">Today's Menu</h3>
 
-            <ul id="menu-list" class="mb-3">
-              <li>Fried Chicken Legs</li>
-              <li>Green Beans</li>
-              <li>Yogurt</li>
-              <li>Fish Tacos</li>
-            </ul>
+            <div id="menu-placeholder" class="mb-3">
+              <ul id="menu-list" class="mb-0">
+                <li>Fried Chicken Legs</li>
+                <li>Green Beans</li>
+                <li>Yogurt</li>
+                <li>Fish Tacos</li>
+              </ul>
+            </div>
 
-            <button id="refresh-menu" class="btn btn-success">Load Menu</button>
+            <button id="refresh-menu" class="btn btn-success" type="button">Load Menu</button>
           </div>
-        </div>
+        </article>
       </div>
 
       <div class="col-md-6">
-        <div class="card shadow-sm mb-3">
+        <article class="card shadow-sm mb-3">
           <div class="card-body">
-            <h3 class="text-primary">Dining Hours</h3>
-            <ul>
-              <li>Dining Hall: 7:30am–10pm</li>
-              <li>Cafe: 8am–3pm</li>
+            <h3 class="text-primary h5">Dining Hours</h3>
+            <ul class="mb-0">
+              <li>Dining Hall: 7:30 AM – 10:00 PM</li>
+              <li>Cafe: 8:00 AM – 3:00 PM</li>
             </ul>
           </div>
-        </div>
+        </article>
       </div>
 
     </div>
